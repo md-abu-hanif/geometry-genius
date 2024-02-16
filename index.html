@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Geometry Genius</title>
+    
+    <!-- css link -->
+    <link rel="stylesheet" href="styles/style.css">
 
     <!-- daisy UI Link -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
@@ -43,7 +46,7 @@
                 </div>
                 <!-- card 02 -->
                 <div class="card card-compact text-center bg-red-100 shadow-xl">
-                    <figure><img class="px-4 pt-4" src="./images/rectangle.png" alt="Shoes" /></figure>
+                    <figure><img class="px-4 pt-4 class" src="./images/rectangle.png" alt="Shoes" /></figure>
                     <div class="card-body">
                         <h2 class="text-xl font-semibold">Rectangle</h2>
                         <p class="text-xl">Area (A) : w x l </p>
@@ -61,19 +64,29 @@
                             </p>
                         </div>
                         <div class="card-actions">
-                            <button onclick="rectangleCalculate()" class="btn btn-primary w-full">Buy Now</button>
+                            <button onclick="rectangleCalculate()" class="btn btn-primary w-full">Calculate</button>
                         </div>
                     </div>
                 </div>
                 <!-- card 03 -->
-                <div class="card card-compact  bg-base-100 shadow-xl">
-                    <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
-                            alt="Shoes" /></figure>
+                <div class="card card-compact text-center bg-base-100 shadow-xl">
+                    <figure><img class="px-4 pt-4" src="./images/parallelogram.png" alt="parallelogram" /></figure>
                     <div class="card-body">
-                        <h2 class="card-title">Shoes!</h2>
-                        <p>If a dog chews shoes whose shoes does he choose?</p>
-                        <div class="card-actions justify-end">
-                            <button class="btn btn-primary">Buy Now</button>
+                        <h2 class="text-xl font-semibold">Parallelogram!</h2>
+                        <p class="text-xl">Area (A): b x h</p>
+                        <div class="flex items-center">
+                            <input id="parallelogram-base" class="w-16 text-sm rounded-md p-2" type="text"
+                                placeholder="length">
+                            <span class="mx-3 text-xl">cm</span>
+                            <input id="parallelogram-height" class="w-16 text-sm rounded-md p-2" type="text"
+                                placeholder="height">
+                            <span class="mx-3 text-xl">cm</span>
+                        </div>
+                        <p class="text-2xl text-left"> Area : <span id="parallelogram-area"></span>
+                            <span>cm<sup>2</sup></span>
+                        </p>
+                        <div class="card-actions">
+                            <button onclick="parallelogramCalculate()" class="w-full btn btn-primary">Calculate</button>
                         </div>
                     </div>
                 </div>
@@ -98,6 +111,7 @@
     </main>
     <script src="./js/traingle.js"></script>
     <script src="./js/rectangle.js"></script>
+    <script src="./js/parallelogram.js"></script>
 </body>
 
 </html>
